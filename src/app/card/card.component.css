@@ -1,0 +1,18 @@
+.card{
+  border-radius: 2px;
+  color: rgba(0,0,0,.87);
+  background: #fff;
+  box-shadow: 0 8px 17px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+
+.card-item{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.card-item-text{
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em;
+}

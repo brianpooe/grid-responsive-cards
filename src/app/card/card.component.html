@@ -1,0 +1,10 @@
+<div class="card card-item">
+  <img class="card-item-img" [src]="magicalMoment.background_image">
+  <div class="card-item-text">
+    <div class="card-item-author">{{magicalMoment.author}}</div>
+    <div class="card-item-published-date">{{magicalMoment.publish_date | date }}</div>
+    <div class="card-item-backstory">{{magicalMoment.backstory}}</div>
+    <br>
+    <div [innerHTML]="magicalMoment.answer"></div>
+  </div>
+</div>

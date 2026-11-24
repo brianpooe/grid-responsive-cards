@@ -3,10 +3,11 @@ import {MagicalMoments} from "../app.component";
 
 @Component({
   selector: 'app-card',
+  standalone: false,
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.css']
 })
 export class CardComponent {
-  @Input()
-  magicalMoment: MagicalMoments | undefined;
+  @Input({ required: true })
+  magicalMoment!: MagicalMoments;
 }

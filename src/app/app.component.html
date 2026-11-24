@@ -1,3 +1,5 @@
 <div class="card-container">
-  <app-card *ngFor="let magicalmoment of magicalMoments" [magicalMoment]="magicalmoment"></app-card>
+  @for (magicalMoment of magicalMoments; track magicalMoment) {
+    <app-card [magicalMoment]="magicalMoment"></app-card>
+  }
 </div>

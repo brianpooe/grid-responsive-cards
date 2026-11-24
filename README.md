@@ -1,6 +1,6 @@
 # Cards
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
+Run `npm ci` to install dependencies. The Angular CLI version used by this project requires Node.js 22.22.3 or later in the 22.x line, 24.15.0 or later in the 24.x line, or 26.0.0 or later.
 
 ## Development server
 

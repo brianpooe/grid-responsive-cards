@@ -1,12 +1,16 @@
+import { CommonModule } from '@angular/common';
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { CardComponent } from './card/card.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        CardComponent
       ],
+      imports: [CommonModule]
     }).compileComponents();
   });
 
@@ -16,16 +20,12 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'cards'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('cards');
-  });
-
-  it('should render title', () => {
+  it('should render one card per magical moment', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('cards app is running!');
+    const authors = fixture.nativeElement.querySelectorAll('.card-item-author');
+    expect(Array.from(authors, (author: Element) => author.textContent)).toEqual(
+      fixture.componentInstance.magicalMoments.map(moment => moment.author)
+    );
   });
 });
